@@ -23,7 +23,11 @@ for i in range(6):
     title_tags = soup.select('.cluster_text_headline')
     titles = []
     for title_tag in title_tags:
-        titles.append(title_tag.text)
+        title = title_tag.text
+        print(title)
+        title = re.compile('[^가-힣 ]').sub(' ', title)   # ^A-Z : A-Z 제외한 나머지     # A-Z 제외한 나머지를 타이틀에서 빼고 빈칸으로 채워라
+        print(title)
+        titles.append(title)
     df_section_titles = pd.DataFrame(titles, columns=['titles'])
     df_section_titles['category'] = category[i]
     df_titles = pd.concat([df_titles, df_section_titles], axis='rows', ignore_index=True)
