@@ -6,7 +6,7 @@ import datetime
 import matplotlib.pyplot as plt
 import numpy as np
 
-category = ['politics', 'Economic', 'Social', 'Culture', 'World','IT']
+category = ['Politics', 'Economic', 'Social', 'Culture', 'World','IT']
 
 # url = 'https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=100'     # 정치
 # url = 'https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=101'     # 경제
